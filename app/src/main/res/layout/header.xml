@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="180dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="#009688"
+
+    android:orientation="vertical"
+    android:gravity="bottom"
+    android:padding="10dp">
+<!--    android:background="#E6D21D">-->
+
+
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/roundImageView"
+        android:layout_width="75dp"
+        android:layout_height="75dp"
+        android:src="@drawable/p1"
+        android:layout_marginLeft="10dp"
+        app:civ_border_color="@android:color/white"
+        app:civ_border_width="2dp"
+        tools:ignore="MissingConstraints"
+        android:background="@drawable/round_background"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Saifullah"
+        android:textSize="15sp"
+        android:layout_marginLeft="13dp"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="www.saifullah.com"
+        android:textSize="14sp"
+        android:layout_marginLeft="13dp"/>
+
+</LinearLayout>

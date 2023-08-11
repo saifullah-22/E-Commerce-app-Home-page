@@ -1,0 +1,5 @@
+<!-- custom_rectangle_button_shape.xml -->
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+    <solid android:color="#FF4081" /> <!-- Background color -->
+    <corners android:radius="0dp" /> <!-- Set corner radius to 0dp for a rectangle -->
+</shape>

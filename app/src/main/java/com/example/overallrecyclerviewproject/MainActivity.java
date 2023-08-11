@@ -1,19 +1,32 @@
 package com.example.overallrecyclerviewproject;
 
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
+import androidx.core.view.GravityCompat;
+import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.os.Bundle;
+import android.view.MenuItem;
 import android.widget.Button;
+import android.widget.Toast;
+
+import com.google.android.material.navigation.NavigationView;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
 
     Button btn;
+
+    private DrawerLayout drawerLayout;
+    private NavigationView navigationView;
+    private Toolbar toolbar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -54,6 +67,64 @@ public class MainActivity extends AppCompatActivity {
 
 
 
+
+        drawerLayout = findViewById(R.id.drawer_layout);
+        navigationView = findViewById(R.id.nav_view);
+        toolbar = findViewById(R.id.toolbar);
+
+        setSupportActionBar(toolbar);
+
+        ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
+                this, drawerLayout, toolbar,
+                R.string.navigation_drawer_open, R.string.navigation_drawer_close
+        );
+        drawerLayout.addDrawerListener(toggle);
+        toggle.syncState();
+        navigationView.inflateMenu(R.menu.nav_menu);
+
+        navigationView.setNavigationItemSelectedListener(this);
+
+
+
+
+    }
+
+    @Override
+    public void onBackPressed() {
+        if (drawerLayout.isDrawerOpen(GravityCompat.START)) {
+            drawerLayout.closeDrawer(GravityCompat.START);
+        } else {
+            super.onBackPressed();
+        }
+    }
+
+
+    public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
+        int id = menuItem.getItemId();
+
+
+        if (id == R.id.nev_home) {
+            Toast.makeText(this, "Home Selected", Toast.LENGTH_SHORT).show();
+        }
+        else if (id == R.id.myOrder) {
+            Toast.makeText(this, "My Order Selected", Toast.LENGTH_SHORT).show();}
+        else if (id == R.id.myCoupons) {
+            Toast.makeText(this, "My Coupons Selected", Toast.LENGTH_SHORT).show();}
+        else if (id == R.id.myWishlist) {
+            Toast.makeText(this, "My Wishlist Selected", Toast.LENGTH_SHORT).show();}
+        else if (id == R.id.myAccount) {
+            Toast.makeText(this, "My Account Selected", Toast.LENGTH_SHORT).show();}
+        else if (id == R.id.logout) {
+            Toast.makeText(this, "Logout Selected", Toast.LENGTH_SHORT).show();}
+
+
+        drawerLayout.closeDrawer(GravityCompat.START);
+        return true;
+    }
+
+    @Override
+    public void onPointerCaptureChanged(boolean hasCapture) {
+        super.onPointerCaptureChanged(hasCapture);
 
     }
 }

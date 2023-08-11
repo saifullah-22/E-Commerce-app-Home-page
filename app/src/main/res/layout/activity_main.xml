@@ -5,10 +5,63 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity">
+    
+    <androidx.drawerlayout.widget.DrawerLayout
+        android:id="@+id/drawer_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:background="#009688"
+                android:elevation="4dp"
+                android:theme="@style/ThemeOverlay.AppCompat.ActionBar" />
+
+
+
+            <!-- Add your main content here -->
+
+        </RelativeLayout>
+
+        <!-- Navigation View -->
+        <com.google.android.material.navigation.NavigationView
+            android:id="@+id/nav_view"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="start"
+            android:fitsSystemWindows="true"
+
+            app:headerLayout="@layout/header">
+
+
+
+
+
+
+            <!-- Navigation View content here -->
+
+        </com.google.android.material.navigation.NavigationView>
+
+
+
+
+
+
+
+
+
 
     <com.google.android.material.appbar.AppBarLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:layout_marginTop="66dp">
 
 
     <androidx.cardview.widget.CardView
@@ -210,7 +263,7 @@
     <RelativeLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="320dp">
+        android:layout_marginTop="380dp">
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/rv"
@@ -220,6 +273,8 @@
             tools:ignore="NotSibling" />
 
     </RelativeLayout>
+
+    </androidx.drawerlayout.widget.DrawerLayout>
 
 
 
