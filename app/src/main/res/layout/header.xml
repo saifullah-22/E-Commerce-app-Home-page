@@ -27,13 +27,13 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Saifullah"
+        android:text="Eman Ansari"
         android:textSize="15sp"
         android:layout_marginLeft="13dp"/>
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="www.saifullah.com"
+        android:text="www.eman.com"
         android:textSize="14sp"
         android:layout_marginLeft="13dp"/>
 

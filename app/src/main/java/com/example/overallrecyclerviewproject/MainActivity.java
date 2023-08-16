@@ -68,7 +68,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         GridLayoutManager gridLayoutManager = new GridLayoutManager(this,2);
         recyclerView.setLayoutManager(gridLayoutManager);
 
-        recyclerView.setAdapter(new com.example.recyclerviewlistview.MyAdapter(getApplicationContext(),items));
+        recyclerView.setAdapter(new com.example.recyclerviewlistview.MyAdapter(getApplicationContext(),items,MainActivity.this));
 
 
 
@@ -130,6 +130,8 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     @Override
     public void onPointerCaptureChanged(boolean hasCapture) {
         super.onPointerCaptureChanged(hasCapture);
+
+
 
     }
 }

@@ -1,5 +1,6 @@
 package com.example.recyclerviewlistview;
 
+import android.app.Activity;
 import android.content.Context;
 import android.graphics.ColorSpace;
 import android.view.LayoutInflater;
@@ -23,9 +24,12 @@ public class MyAdapter extends RecyclerView.Adapter<MyViewHolder> {
     Context context;
     List<Item> items;
 
-    public MyAdapter(Context context, List<Item> items) {
+    Activity activity;
+
+    public MyAdapter(Context context, List<Item> items, Activity activity) {
         this.context = context;
         this.items = items;
+        this.activity=activity;
     }
 
     @NonNull
@@ -35,27 +39,28 @@ public class MyAdapter extends RecyclerView.Adapter<MyViewHolder> {
     }
 
     @Override
-    public void onBindViewHolder(@NonNull MyViewHolder holder,  int position) {
+    public void onBindViewHolder(@NonNull MyViewHolder holder, int position) {
         holder.name.setText(items.get(position).getName());
         holder.imageview.setImageResource(items.get(position).getImage());
 
         holder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
-                if(holder.getAdapterPosition() ==0){
-                    ((FragmentActivity)context).getSupportFragmentManager().beginTransaction()
-                            .replace(R.id.con, new Fragment1()).commit();
+                if (activity != null) {
+                    if (holder.getAdapterPosition() == 0) {
+                        ((FragmentActivity) activity).getSupportFragmentManager().beginTransaction()
+                                .replace(R.id.con, new Fragment1())
+                                .commit();
+                    } else if (holder.getAdapterPosition() == 1) {
+                        ((FragmentActivity) activity).getSupportFragmentManager().beginTransaction()
+                                .replace(R.id.con, new Fragment1())  // Example: Replace with the appropriate Fragment
+                                .commit();
+                    }
                 }
-                else if(holder.getAdapterPosition() ==1){
-                    ((FragmentActivity)context).getSupportFragmentManager().beginTransaction()
-                            .replace(R.id.con, new Fragment1()).commit();
-                }
-
             }
         });
-
     }
+
 
     @Override
     public int getItemCount() {
