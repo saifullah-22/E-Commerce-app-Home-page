@@ -1,12 +1,17 @@
 package com.example.recyclerviewlistview;
 
 import android.content.Context;
+import android.graphics.ColorSpace;
 import android.view.LayoutInflater;
+import android.view.View;
 import android.view.ViewGroup;
 
 import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.FragmentActivity;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.overallrecyclerviewproject.Fragment1;
 import com.example.overallrecyclerviewproject.Item;
 import com.example.overallrecyclerviewproject.MyViewHolder;
 import com.example.overallrecyclerviewproject.R;
@@ -30,10 +35,25 @@ public class MyAdapter extends RecyclerView.Adapter<MyViewHolder> {
     }
 
     @Override
-    public void onBindViewHolder(@NonNull MyViewHolder holder, int position) {
+    public void onBindViewHolder(@NonNull MyViewHolder holder,  int position) {
         holder.name.setText(items.get(position).getName());
-        //   holder.email.setText(items.get(position).getEmail());
         holder.imageview.setImageResource(items.get(position).getImage());
+
+        holder.itemView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                if(holder.getAdapterPosition() ==0){
+                    ((FragmentActivity)context).getSupportFragmentManager().beginTransaction()
+                            .replace(R.id.con, new Fragment1()).commit();
+                }
+                else if(holder.getAdapterPosition() ==1){
+                    ((FragmentActivity)context).getSupportFragmentManager().beginTransaction()
+                            .replace(R.id.con, new Fragment1()).commit();
+                }
+
+            }
+        });
 
     }
 

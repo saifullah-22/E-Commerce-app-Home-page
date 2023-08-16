@@ -36,26 +36,31 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         RecyclerView recyclerView = findViewById(R.id.rv);
 
         List<Item> items = new ArrayList<Item>();
-        items.add(new Item("USA",R.drawable.p1));
-        items.add(new Item("Canada", R.drawable.p2));
-        items.add(new Item("Australia", R.drawable.p3));
-        items.add(new Item("Brazil", R.drawable.p4));
-        items.add(new Item("Chile", R.drawable.p5));
-        items.add(new Item("Armenia", R.drawable.p6));
-        items.add(new Item("China", R.drawable.p7));
-        items.add(new Item("Belgium", R.drawable.p8));
-        items.add(new Item("Egypt", R.drawable.p9));
-        items.add(new Item("Pakistan", R.drawable.p10));
-        items.add(new Item("India", R.drawable.p11));
-        items.add(new Item("Itlay", R.drawable.p12));
-        items.add(new Item("Libya", R.drawable.p13));
-        items.add(new Item("Kuwait", R.drawable.p14));
-        items.add(new Item("France", R.drawable.p15));
-        items.add(new Item("Greece", R.drawable.p16));
-        items.add(new Item("Germany", R.drawable.p17));
-        items.add(new Item("Iceland", R.drawable.p18));
-        items.add(new Item("Japan", R.drawable.p19));
-        items.add(new Item("Maldives", R.drawable.p20));
+        items.add(new Item("SUAVAGE",R.drawable.per1));
+        items.add(new Item("POCKET PERFUMES", R.drawable.pf1));
+        items.add(new Item("ATTAR", R.drawable.at1));
+        items.add(new Item("BURBERRY", R.drawable.d1));
+        items.add(new Item("KID'S WEAR",R.drawable.p2a));
+        items.add(new Item("WOMEN'S WEAR",R.drawable.w2));
+        items.add(new Item("MEN'S WEAR",R.drawable.m4));
+        items.add(new Item("JACKETS",R.drawable.j1));
+        items.add(new Item("MEN'S WESTERN WEAR",R.drawable.s5));
+        items.add(new Item("BRACELETS",R.drawable.t2));
+        items.add(new Item("NECKLACES",R.drawable.n5));
+        items.add(new Item("RINGS",R.drawable.r1));
+        items.add(new Item("HAIR CLAWS",R.drawable.h1));
+        items.add(new Item("EARINGS",R.drawable.e4));
+        items.add(new Item("VOILIN",R.drawable.v2));
+        items.add(new Item("DRUMS",R.drawable.d1));
+        items.add(new Item("FLUTE",R.drawable.f2));
+        items.add(new Item("PIANO",R.drawable.p1));
+        items.add(new Item("GUITAR",R.drawable.g1));
+        items.add(new Item("SMART WATCHES",R.drawable.a3));
+        items.add(new Item("MEN'S WATCHES",R.drawable.ww4));
+        items.add(new Item("WOMEN'S WATCHES",R.drawable.ww2));
+
+
+
 
 //        recyclerView.setLayoutManager(new LinearLayoutManager(this));   //use this line when you don't use gridview
 
