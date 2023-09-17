@@ -10,16 +10,15 @@ import androidx.recyclerview.widget.RecyclerView;
 public class MyViewHolder extends RecyclerView.ViewHolder {
 
     public ImageView imageview;
-//   TextView email;
+//   public TextView price;
 public TextView name;
 
     public MyViewHolder(@NonNull View itemView) {
         super(itemView);
 
         imageview = itemView.findViewById(R.id.imageview);
-//        email = itemView.findViewById(R.id.email);
+//        price = itemView.findViewById(R.id.price);
         name = itemView.findViewById(R.id.name);
     }
 }
 
-//#E5D68A

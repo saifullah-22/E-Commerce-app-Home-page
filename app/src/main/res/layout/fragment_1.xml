@@ -126,9 +126,7 @@
         android:padding="10dp"
         android:textStyle="bold"
         android:backgroundTint="@color/black"
-
-
-        />
+        android:drawableRight="@drawable/wishlist" />
 
     <Button
         android:id="@+id/btn2"
@@ -142,7 +140,7 @@
         android:backgroundTint="@color/black"
         android:textStyle="bold"
         android:padding="10dp"
-        android:drawableRight="@drawable/baseline_shopping_cart_24"
+        android:drawableRight="@drawable/cart"
         />
 
 

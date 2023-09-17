@@ -42,6 +42,7 @@ public class MyAdapter extends RecyclerView.Adapter<MyViewHolder> {
     public void onBindViewHolder(@NonNull MyViewHolder holder, int position) {
         holder.name.setText(items.get(position).getName());
         holder.imageview.setImageResource(items.get(position).getImage());
+//        holder.price.setText(items.get(position).getPrice());
 
         holder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override

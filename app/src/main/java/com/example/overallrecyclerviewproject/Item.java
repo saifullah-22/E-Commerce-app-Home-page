@@ -2,12 +2,12 @@ package com.example.overallrecyclerviewproject;
 
 public class Item {
     String name;
-//    String email;
+//    int price;
     int image;
 
     public Item(String name, int image) {
         this.name = name;
-//        this.email = email;
+//        this.price = price;
         this.image = image;
     }
 
@@ -19,12 +19,12 @@ public class Item {
         this.name = name;
     }
 
-//    public String getEmail() {
-//        return email;
+//    public int getPrice() {
+//        return price;
 //    }
 //
-//    public void setEmail(String email) {
-//        this.email = email;
+//    public void setPrice(int price) {
+//        this.price = price;
 //    }
 
     public int getImage() {

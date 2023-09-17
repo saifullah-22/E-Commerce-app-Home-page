@@ -10,8 +10,10 @@ import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
+import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.Toast;
 
@@ -22,7 +24,7 @@ import java.util.List;
 
 public class MainActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
 
-    Button btn;
+
 
     private DrawerLayout drawerLayout;
     private NavigationView navigationView;
@@ -32,6 +34,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,WindowManager.LayoutParams.FLAG_FULLSCREEN);
 
         RecyclerView recyclerView = findViewById(R.id.rv);
 
@@ -112,7 +115,9 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
             Toast.makeText(this, "Home Selected", Toast.LENGTH_SHORT).show();
         }
         else if (id == R.id.myOrder) {
-            Toast.makeText(this, "My Order Selected", Toast.LENGTH_SHORT).show();}
+            Toast.makeText(this, "My Order Selected", Toast.LENGTH_SHORT).show();
+            Intent myIntent = new Intent(MainActivity.this, MainActivity2.class);
+            startActivity(myIntent);}
         else if (id == R.id.myCoupons) {
             Toast.makeText(this, "My Coupons Selected", Toast.LENGTH_SHORT).show();}
         else if (id == R.id.myWishlist) {

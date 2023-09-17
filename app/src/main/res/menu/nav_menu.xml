@@ -21,7 +21,7 @@
         <item
             android:id="@+id/myWishlist"
             android:title="My Wishlist"
-            android:icon="@drawable/whishlist"/>
+            android:icon="@drawable/wishlist"/>
         <item
             android:id="@+id/myAccount"
             android:title="My Account"
@@ -34,38 +34,5 @@
     </group>
 
 
-    <!--<item android:title="Profile">
 
-        <menu>
-            <group android:checkableBehavior="single">
-                <item
-                    android:id="@+id/nav_login"
-                    android:title="Login"
-                    android:icon="@drawable/home"/>
-                <item
-                    android:id="@+id/nav_profile"
-                    android:title="Profile" />
-                <item
-                    android:id="@+id/nav_logout"
-                    android:title="Logout" />
-            </group>
-
-        </menu>
-    </item>
-
-
-
-
-    <item android:title="Communicate">
-        <menu>
-            <item
-                android:id="@+id/nav_share"
-                android:title="Share" />
-            <item
-                android:id="@+id/nav_rate"
-                android:title="Rate" />
-
-        </menu>
-    </item>
--->
 </menu>
